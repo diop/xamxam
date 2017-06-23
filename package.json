@@ -1,0 +1,23 @@
+{
+  "name": "xamxam",
+  "version": "1.0.0",
+  "description": "Xamxam Institute of Technology",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diop/xamxam.git"
+  },
+  "author": "Fode Diop",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/diop/xamxam/issues"
+  },
+  "homepage": "https://github.com/diop/xamxam#readme",
+  "dependencies": {
+    "express": "^4.15.3",
+    "jest": "^20.0.4"
+  }
+}
