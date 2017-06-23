@@ -1,2 +1,2 @@
 # xamxam
-Xamxam Web App Python  / Django Stack
+Xamxam Institute of Technology
