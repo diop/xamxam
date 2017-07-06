@@ -2,7 +2,7 @@
   "name": "xamxam",
   "version": "1.0.0",
   "description": "Xamxam Institute of Technology",
-  "main": "app.js",
+  "main": "node app.js",
   "scripts": {
     "test": "mocha || true"
   },
