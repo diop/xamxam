@@ -1,0 +1,25 @@
+DROP TABLE IF EXISTS courses CASCADE;
+DROP TABLE IF EXISTS students CASCADE;
+DROP TABLE IF EXISTS reviews CASCADE;
+
+CREATE TABLE courses (
+  id SERIAL PRIMARY KEY,
+  title VARCHAR(255) NOT NULL,
+  instructor VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE students (
+  id SERIAL PRIMARY KEY,
+  name TEXT NOT NUll,
+  email TEXT UNIQUE NOT NULL,
+  password TEXT NOT NULL,
+  date_joined TIMESTAMP NOT NULL DEFAULT NOW()
+);
+
+CREATE TABLE reviews (
+  id SERIAL PRIMARY KEY,
+  content TEXT NOT NULL,
+  student_id INTEGER NOT NULL REFERENCES students(id),
+  course_id INTEGER NOT NULL REFERENCES courses(id),
+  date_created TIMESTAMP NOT NULL DEFAULT NOW()
+);
