@@ -4,11 +4,11 @@ const session = require('cookie-session')
 const ejs = require('ejs')
 const path = require('path')
 const bodyParser = require('body-parser')
-const home = require('./controllers/routes/index')
+const home = require('./controllers=/routes/index')
 const authentication = require('./controllers/routes/authentication')
-const students = require('./server/routes/students')
-const reviews = require('./server/routes/reviews')
-const courses = require('./server/routes/courses')
+const students = require('./controllers/routes/students')
+const reviews = require('./controllers/routes/reviews')
+const courses = require('./controllers/routes/courses')
 
 const port = process.env.PORT || 3000
 
