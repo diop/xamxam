@@ -2,10 +2,14 @@
   "name": "xamxam",
   "version": "1.0.0",
   "description": "Xamxam Institute of Technology",
-  "main": "node app.js",
   "scripts": {
-    "test": "mocha || true"
-  },
+   "start": "node src/server.js",
+   "dev": "nodemon src/server.js",
+   "db:create": "createdb xamxam",
+   "db:drop": "dropdb xamxam",
+   "db:schema": "psql -d xamxam < src/models/database/schema.sql",
+   "db:seed": "psql -d xamxam < src/models/database/seed.sql"
+ },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/diop/xamxam.git"
@@ -17,11 +21,15 @@
   },
   "homepage": "https://github.com/diop/xamxam#readme",
   "dependencies": {
+    "bcrypt": "^1.0.3",
+    "body-parser": "^1.18.2",
+    "ejs": "^2.5.7",
     "express": "^4.15.3",
-    "pg-promise": "^6.3.1"
+    "express-session": "^1.15.6",
+    "pg-promise": "^7.0.2"
   },
   "devDependencies": {
-    "chai": "^4.0.2",
-    "mocha": "^3.4.2"
+    "morgan": "^1.9.0",
+    "nodemon": "^1.12.1"
   }
 }
