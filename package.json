@@ -3,13 +3,13 @@
   "version": "1.0.0",
   "description": "Xamxam Institute of Technology",
   "scripts": {
-   "start": "node src/server.js",
-   "dev": "nodemon src/server.js",
-   "db:create": "createdb xamxam",
-   "db:drop": "dropdb xamxam",
-   "db:schema": "psql -d xamxam < src/models/database/schema.sql",
-   "db:seed": "psql -d xamxam < src/models/database/seed.sql"
- },
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "db:create": "createdb xamxam",
+    "db:drop": "dropdb xamxam",
+    "db:schema": "psql -d xamxam < src/models/database/schema.sql",
+    "db:seed": "psql -d xamxam < src/models/database/seed.sql"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/diop/xamxam.git"
@@ -23,6 +23,7 @@
   "dependencies": {
     "bcrypt": "^1.0.3",
     "body-parser": "^1.18.2",
+    "cookie-session": "^2.0.0-beta.3",
     "ejs": "^2.5.7",
     "express": "^4.15.3",
     "express-session": "^1.15.6",
