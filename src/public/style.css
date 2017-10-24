@@ -1,0 +1,59 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+}
+
+.img-size {
+  height: 300px;
+  width: 100vw;
+  background-image: url("images/xamxam-header.jpg");
+  background-size: stretch;
+}
+
+.header {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile-img {
+  height: 160px;
+  width: 160px;
+  margin-right: 20px;
+  background-image: url("avatar-place-holder.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.form {
+  width: 250px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.flex {
+  width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.form-heading {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.flex-row {
+  width: 400px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}

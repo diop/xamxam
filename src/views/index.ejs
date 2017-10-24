@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Xamxam </title>
+  <link rel="stylesheet" type="text/css" href="/style.css">
+  <link
+    rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+  <script type="text/javascript" src="/script.js"></script>
+</head>
+<body>
+  <%- include( 'partials/header' ) %>
+  <div class="img-size"></div>
+
+  <div class="row">
+    <div class="col-xs-4 col-sm-4 col-md-4 col-xs-offset-2 col-sm-offset-2 col-md-offset-2">
+      <h2> Courses </h2>
+
+      <div class="course-list">
+        <% courses.forEach( function(course) { %>
+          <div>
+            <h5><a href="/courses/<%= course.id %>"><%= course.title %></a></h5>
+            <span>By: <%= course.instructor %></span>
+          </div>
+        <% }) %>
+      </div>
+    </div>
+
+    <div class="col-xs-6 col-sm-6 col-md-6">
+      <h2> Recent Reviews </h2>
+
+      <div class="review-list">
+        <% reviews.forEach( function(review) { %>
+          <div>
+            <a href="/courses/<%= review.course_id %>"><%= review.course_title %></a>
+            <span><%= review.date_created %></span>
+            <p>
+              <%= review.content %>
+            </p>
+            <a href="/students/<%= review.student_id %>"> By: <%= review.student_name %></a>
+            <p> ------------------------------ </p>
+          </div>
+        <% }) %>
+      </div>
+    </div>
+  <%- include( 'partials/footer' ) %>
